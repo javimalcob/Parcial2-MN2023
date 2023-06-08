@@ -32,10 +32,6 @@ contains
             int = int + aux * h
         end do 
     
-        print *, '~~~~~~~~~~~~~~~~~~~~~~~~~~~'
-        !print *, 'la integral es', int
-        print *, '~~~~~~~~~~~~~~~~~~~~~~~~~~~'
-    
     end subroutine trapecionoeq
     
 
