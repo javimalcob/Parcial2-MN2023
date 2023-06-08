@@ -127,7 +127,7 @@ implicit none
                 deallocate(x,y)
 
             end if
-            
+            write(fu,*) t(i), z(i), v(i)
         end do
                 
            write(*,*) "	Procesamiento de datos exitoso lo datos se guardaron en >salida.dat<. abrelo!  :D"
