@@ -28,7 +28,7 @@ contains
     
         do i = 0 , n-1
             h = x(i+1)-x(i)
-            aux = y(i) + y(i+1)/2
+            aux = (y(i) + y(i+1))/2._wp
             int = int + aux * h
         end do 
     

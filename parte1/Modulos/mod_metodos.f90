@@ -36,7 +36,7 @@ contains
 		do i = 0 , n-1
 						
 			h = x(i+1)-x(i)
-			aux = (y(i) + y(i+1))/2
+			aux = (y(i) + y(i+1))/2._wp
 			int = int + aux * h
 		    write(*,'(I6, 7X, F22.14)') i+1, int
 		end do 
