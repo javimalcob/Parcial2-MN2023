@@ -29,13 +29,16 @@ contains
 		int = 0.0_wp	
 		
 	!Bloque de procesamiento
-	
+		
+		print*,''	
+		print*,'Punto nro:	Integral punto a punto:'
+
 		do i = 0 , n-1
 						
 			h = x(i+1)-x(i)
 			aux = y(i) + y(i+1)/2
 			int = int + aux * h
-		    
+		    write(*,'(I6, 7X, F22.14)') i+1, int
 		end do 
 		
 		print *, ''
