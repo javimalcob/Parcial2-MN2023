@@ -12,7 +12,7 @@ set term x11 persist
 ####            h o l i s    ( :            ######
 ##################################################
 
-    set title  "Polinomio Lagrange z(t) vs t "
+    set title "Gráficos superpuestos z(t) , Poli Lagrange z(t) , z(t) ajustado vs tiempo"
     set xlabel "Tiempo"
     set ylabel "Polinomio Lagrange z"
     set grid
