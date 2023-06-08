@@ -43,11 +43,11 @@ implicit none
   
   !Escribimos los datos en los vectores
 	
-	allocate (x(cant_datos), y(cant_datos))
+	allocate (x(0:cant_datos-1), y(0:cant_datos-1))
 
 	open(newunit=fu, file=archivo, status='old', action='read')
 			print*,'Los vectores		x		y'
-		do i = 1, cant_datos	
+		do i = 0, cant_datos-1	
 			read(fu,*) x(i), y(i)		
 			write(*,'(8X, 2F22.14)') x(i), y(i)
 		end do
@@ -55,7 +55,7 @@ implicit none
 	close (fu)
 
   !Ahora llamamos a la subrutina, la evaluamos, y calculamos la integral
-	call trapecionoeq(x, y, cant_datos, int)
+	call trapecionoeq(x, y, cant_datos-1, int)
 
 deallocate (x, y)
 

@@ -181,7 +181,7 @@ implicit none
         fz(i) = - m * g - c * v(i) 
     end do
     
-    call trapecionoeq(z, fz, nlines , int )
+    call trapecionoeq(z, fz, nlines-1 , int )
     
     
     print*,'	El trabajo calculado con el met. del trapecio es W(z) =' ,int
@@ -197,7 +197,7 @@ implicit none
 	print*,'	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~'
 	print*, ''
 	
-     work = -1._wp * (1._wp/2._wp) * m *( (v(nlines-1))**2 - (v(0))**2 )
+     work = (1._wp/2._wp) * m *( (v(nlines-1))**2 - (v(0))**2 )
      
      print*,'	Trabajo con consideracion energeticas es =', work
      
